@@ -10,6 +10,16 @@ BIN_DIR="$HOME/.local/bin"
 SYSTEMD_DIR="$HOME/.config/systemd/user"
 HYPR_DIR="$HOME/.config/hypr"
 
+# Parse flags
+INSTALL_SYSTEMD=1
+INSTALL_HYPRLAND=1
+for arg in "$@"; do
+    case "$arg" in
+        --no-systemd) INSTALL_SYSTEMD=0 ;;
+        --no-hyprland) INSTALL_HYPRLAND=0 ;;
+    esac
+done
+
 echo "==> Plasma Screensaver installer"
 
 # Create directories
@@ -31,7 +41,7 @@ LAUNCHER
 chmod +x "$BIN_DIR/plasma-screensaver"
 
 # Install systemd service
-if [[ "${1:-}" != "--no-systemd" ]]; then
+if [[ $INSTALL_SYSTEMD -eq 1 ]]; then
     echo "==> Installing systemd user service"
     cat > "$SYSTEMD_DIR/plasma-screensaver.service" << SERVICE
 [Unit]
@@ -54,7 +64,7 @@ SERVICE
 fi
 
 # Install Hyprland rules
-if [[ "${1:-}" != "--no-hyprland" ]]; then
+if [[ $INSTALL_HYPRLAND -eq 1 ]]; then
     echo "==> Installing Hyprland window rules"
     cat > "$HYPR_DIR/plasma-screensaver.conf" << 'HYPR'
 # Plasma Screensaver — Hyprland window rules

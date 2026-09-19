@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plasma Screensaver — Animated Wayland Screensaver</title>
-    <meta name="description" content="Real-time animated plasma effect screensaver for Wayland compositors. 5 visual modes, smooth 30fps, idle detection.">
+    <meta name="description" content="Real-time animated plasma effect screensaver for Wayland compositors. Smooth 30fps, idle detection, easy install.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -76,31 +76,13 @@
             border: 1px solid var(--border);
         }
         .btn-secondary:hover { border-color: var(--accent); }
-        .modes-section { padding: 80px 0; }
+        .features-section { padding: 80px 0; }
         .section-title {
             font-size: 2rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 48px;
         }
-        .modes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .mode-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            text-align: center;
-            transition: all 0.2s;
-        }
-        .mode-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-        .mode-icon { font-size: 2.5rem; margin-bottom: 12px; }
-        .mode-name { font-weight: 600; margin-bottom: 4px; }
-        .mode-desc { font-size: 0.85rem; color: var(--text-dim); }
-        .features-section { padding: 80px 0; }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -161,42 +143,10 @@
     <section class="hero">
         <div class="container">
             <h1>Plasma Screensaver</h1>
-            <p>Real-time animated plasma effects for Wayland compositors. Beautiful, lightweight, and infinitely customizable.</p>
+            <p>Real-time animated plasma effect screensaver for Wayland compositors. Beautiful, lightweight, and infinitely customizable.</p>
             <div class="cta-group">
                 <button class="btn btn-primary" onclick="openCheckout()">Buy Now — $9.99</button>
                 <a href="#features" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
-    <section class="modes-section">
-        <div class="container">
-            <h2 class="section-title">5 Visual Modes</h2>
-            <div class="modes-grid">
-                <div class="mode-card">
-                    <div class="mode-icon">🌊</div>
-                    <div class="mode-name">Plasma</div>
-                    <div class="mode-desc">Classic overlapping sine waves with HSV color cycling</div>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon">🔥</div>
-                    <div class="mode-name">Fire</div>
-                    <div class="mode-desc">Rising flames with turbulence and ember flicker</div>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon">💚</div>
-                    <div class="mode-name">Matrix</div>
-                    <div class="mode-desc">Falling green code with phosphor glow trails</div>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon">🌊</div>
-                    <div class="mode-name">Waves</div>
-                    <div class="mode-desc">Ocean waves with foam and depth gradient</div>
-                </div>
-                <div class="mode-card">
-                    <div class="mode-icon">🔮</div>
-                    <div class="mode-name">Kaleidoscope</div>
-                    <div class="mode-desc">6-fold mirrored symmetry with polar plasma</div>
-                </div>
             </div>
         </div>
     </section>
@@ -209,8 +159,8 @@
                     <p>Downscaled rendering with bilinear upscaling for buttery smooth animation without taxing your GPU.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🖥️ Multi-Monitor</h3>
-                    <p>Works across all your displays. Activates on idle, exits on any input.</p>
+                    <h3>🖥️ Fullscreen</h3>
+                    <p>Takes over your entire display. Activates on idle, exits on any input.</p>
                 </div>
                 <div class="feature-card">
                     <h3>🔒 Privacy First</h3>
@@ -222,7 +172,7 @@
                 </div>
                 <div class="feature-card">
                     <h3>🔧 Configurable</h3>
-                    <p>Idle timeout, framerate, visual mode — all via command line flags.</p>
+                    <p>Idle timeout, framerate — all via command line flags.</p>
                 </div>
                 <div class="feature-card">
                     <h3>📦 Easy Install</h3>
@@ -241,7 +191,7 @@ cd plasma-screensaver
                 <div class="price">$9.99<span> one-time</span></div>
                 <p style="color: var(--text-dim);">Pay once, use forever. Free updates for life.</p>
                 <ul class="features-list">
-                    <li>All 5 visual modes</li>
+                    <li>Plasma visual mode</li>
                     <li>Unlimited computers</li>
                     <li>Free lifetime updates</li>
                     <li>Source code included</li>
