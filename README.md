@@ -1,12 +1,12 @@
 # Plasma Screensaver
 
-Real-time animated plasma effect screensaver for Wayland compositors. 5 visual modes, smooth 30fps, idle detection.
+Real-time animated plasma effect screensaver for Wayland compositors. Smooth 30fps, idle detection, easy install.
 
 ## Features
 
-- **5 Visual Modes**: Plasma, Fire, Matrix, Waves, Kaleidoscope
+- **Plasma Mode**: Classic overlapping sine waves with HSV color cycling
 - **Smooth 30fps**: Downscaled rendering with bilinear upscaling
-- **Multi-Monitor**: Works across all displays
+- **Fullscreen**: Takes over your entire display
 - **Idle Detection**: Activates after configurable idle timeout
 - **Privacy First**: No telemetry, no network calls, no accounts
 - **Open Source**: MIT licensed
@@ -31,14 +31,11 @@ This installs:
 # Run once (no idle wait)
 plasma-screensaver --no-idle
 
-# Run with specific mode
-plasma-screensaver --mode fire
-
 # Run with custom idle timeout (seconds)
 plasma-screensaver --idle-timeout 600
 
 # Run immediately, no idle detection
-plasma-screensaver --no-idle --mode plasma
+plasma-screensaver --no-idle
 ```
 
 ## Systemd
