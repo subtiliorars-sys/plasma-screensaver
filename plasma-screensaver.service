@@ -1,0 +1,12 @@
+[Unit]
+Description=Plasma Screensaver
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/plasma-screensaver --idle-timeout 300
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
